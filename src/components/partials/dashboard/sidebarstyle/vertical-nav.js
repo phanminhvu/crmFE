@@ -59,8 +59,8 @@ const VerticalNav = memo(() => {
 
 
                 <Accordion.Item as="li" eventKey="Danhmucchung"
-                                bsPrefix={`nav-item ${active === 'error' ? 'active' : ''} `}
-                                onClick={() => setActive('error')}>
+                                bsPrefix={`nav-item ${active === 'Danhmucchung' ? 'active' : ''} `}
+                                onClick={() => setActive('Danhmucchung')}>
                     <CustomToggle eventKey="Danhmucchung" active={activeMenu === 'Danhmucchung' ? true : false}
                                   onClick={(activeKey) => setActiveMenu(activeKey)}>
                         <OverlayTrigger placement="right" overlay={<Tooltip>Danh mục chung</Tooltip>}>
@@ -87,7 +87,6 @@ const VerticalNav = memo(() => {
                     <Accordion.Collapse eventKey="Danhmucchung">
                         <ul className="sub-nav">
                             <Nav.Item as="li">
-                                <li className={`${location.pathname === '/company-type' ? 'active' : ''} nav-item `}>
                                     <Link to="/company-type"
                                           className={`${location.pathname === '/company-type' ? 'active' : ''} nav-link `}
                                           aria-current="page">
@@ -103,10 +102,8 @@ const VerticalNav = memo(() => {
                                         </OverlayTrigger>
                                         <span className="item-name">Loại khách hàng</span>
                                     </Link>
-                                </li>
                             </Nav.Item>
                             <Nav.Item as="li">
-                                <li className={`${location.pathname === '/company-group' ? 'active' : ''} nav-item `}>
                                     <Link to="/company-group"
                                           className={`${location.pathname === '/company-group' ? 'active' : ''} nav-link `}
                                           aria-current="page">
@@ -122,7 +119,6 @@ const VerticalNav = memo(() => {
                                         </OverlayTrigger>
                                         <span className="item-name">Nhóm khách hàng</span>
                                     </Link>
-                                </li>
                             </Nav.Item>
                         </ul>
                     </Accordion.Collapse>

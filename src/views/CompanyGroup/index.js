@@ -9,7 +9,7 @@ import {
     Popover,
     Input,
     message,
-    Row,
+    Row,Typography,
     Tag
 } from 'antd';
 //flatpickr
@@ -28,7 +28,7 @@ import CompanyGroupServices from "../../services/companyGroupServices";
 import SubHeader from "../../components/partials/dashboard/headerstyle/sub-header";
 
 // Import selectors & action from setting store
-
+const { Text } = Typography;
 const waitTime = (time) => {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -179,7 +179,7 @@ const CompanyGroup = memo((props) => {
                     <Form name='search' form={searchForm}>
                         <Row gutter={16} justify='end'>
                             <Col xs={24} sm={24} md={24} lg={6} xl={6}>
-                                <Form.Item label='Mã nhóm：' name='Code'>
+                                <Form.Item label={ <Text strong>Mã nhóm </Text>} name='Code'>
                                     <Input placeholder='Mã loại hình' allowClear/>
                                 </Form.Item>
                             </Col>
